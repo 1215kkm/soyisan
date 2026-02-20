@@ -803,10 +803,16 @@
             <div class="img-modal-close" id="imgModalClose">&times;</div>
             <div class="swiper img-modal-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/sec3-large-1.jpg" onerror="this.onerror=null;this.src='images/sec-3-img-10.png'" alt="새벽을 여는 첫 손길" /></div>
-                    <div class="swiper-slide"><img src="images/sec3-large-2.jpg" onerror="this.onerror=null;this.src='images/photo-4-10.png'" alt="전통 방식 그대로 젓기" /></div>
-                    <div class="swiper-slide"><img src="images/sec3-large-3.jpg" onerror="this.onerror=null;this.src='images/photo-5-10.png'" alt="두부가 만들어지는 순간" /></div>
-                    <div class="swiper-slide"><img src="images/sec3-large-4.jpg" onerror="this.onerror=null;this.src='images/photo-3-10.png'" alt="정확한 계량과 마무리" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-1.jpg" alt="1" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-2.jpg" alt="2" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-3.jpg" alt="3" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-4.jpg" alt="4" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-5.jpg" alt="5" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-6.jpg" alt="6" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-7.jpg" alt="7" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-8.jpg" alt="8" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-9.jpg" alt="9" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-10.jpg" alt="10" /></div>
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -818,6 +824,20 @@
             /* ========================================
                Section 3 Swiper
                ======================================== */
+            var imgModal = document.getElementById('imgModal');
+            var imgModalClose = document.getElementById('imgModalClose');
+
+            function openModal(slideIdx) {
+                modalSwiper.slideTo(slideIdx, 0);
+                imgModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                imgModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
             var sec3Swiper = new Swiper('.sec3-swiper', {
                 slidesPerView: 'auto',
                 spaceBetween: 20,
@@ -826,6 +846,14 @@
                     prevEl: '.swiper-prev-btn',
                     nextEl: '.swiper-next-btn',
                 },
+                on: {
+                    click: function () {
+                        var idx = sec3Swiper.clickedIndex;
+                        if (idx !== undefined && idx >= 0) {
+                            openModal(idx);
+                        }
+                    }
+                }
             });
 
             /* ========================================
@@ -841,35 +869,14 @@
                 keyboard: { enabled: true },
             });
 
-            var imgModal = document.getElementById('imgModal');
-            var imgModalClose = document.getElementById('imgModalClose');
-
-            document.querySelectorAll('.sec3-modal-trigger').forEach(function (img) {
-                img.addEventListener('click', function () {
-                    var idx = parseInt(this.getAttribute('data-slide-index'));
-                    modalSwiper.slideTo(idx, 0);
-                    imgModal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-
-            imgModalClose.addEventListener('click', function () {
-                imgModal.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+            imgModalClose.addEventListener('click', closeModal);
 
             imgModal.addEventListener('click', function (e) {
-                if (e.target === imgModal) {
-                    imgModal.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
+                if (e.target === imgModal) closeModal();
             });
 
             document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && imgModal.classList.contains('active')) {
-                    imgModal.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
+                if (e.key === 'Escape' && imgModal.classList.contains('active')) closeModal();
             });
 
             /* ========================================
