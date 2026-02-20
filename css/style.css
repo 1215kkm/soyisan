@@ -1849,7 +1849,7 @@ a,
 .scroll-reveal-child > * {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 .scroll-reveal-child.visible > * {
   opacity: 1;
@@ -2048,7 +2048,7 @@ body.menu-open {
 
 
   .div10 {font-size: 50px;}
-  
+
   /* Section 4 */
   .frame-162 {
     max-width: 100%;
