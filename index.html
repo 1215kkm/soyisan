@@ -828,25 +828,17 @@
             var imgModalClose = document.getElementById('imgModalClose');
 
             function openModal(slideIdx) {
-                console.log('[DEBUG] openModal 호출, slideIdx:', slideIdx);
-                console.log('[DEBUG] modalSwiper:', modalSwiper);
-                console.log('[DEBUG] imgModal:', imgModal);
                 if (modalSwiper) {
                     modalSwiper.slideTo(slideIdx, 0);
                 }
                 imgModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
-                console.log('[DEBUG] 모달 active 클래스 추가 완료');
             }
 
             function closeModal() {
                 imgModal.classList.remove('active');
                 document.body.style.overflow = '';
             }
-
-            console.log('[DEBUG] sec3-swiper 초기화 시작');
-            console.log('[DEBUG] .sec3-swiper 요소:', document.querySelector('.sec3-swiper'));
-            console.log('[DEBUG] .sec3-swiper 슬라이드 수:', document.querySelectorAll('.sec3-swiper .swiper-slide').length);
 
             var sec3Swiper = new Swiper('.sec3-swiper', {
                 slidesPerView: 'auto',
@@ -857,28 +849,26 @@
                     nextEl: '.swiper-next-btn',
                 },
                 on: {
-                    click: function (swiper, e) {
-                        console.log('[DEBUG] Swiper click 이벤트 발생!');
-                        console.log('[DEBUG] this.clickedIndex:', this.clickedIndex);
-                        console.log('[DEBUG] this.clickedSlide:', this.clickedSlide);
-                        console.log('[DEBUG] event target:', e && e.target);
+                    click: function () {
                         var idx = this.clickedIndex;
                         if (idx !== undefined && idx >= 0) {
-                            console.log('[DEBUG] 모달 열기, slideIdx:', idx);
                             openModal(idx);
-                        } else {
-                            console.log('[DEBUG] clickedIndex 없음, 모달 열지 않음');
                         }
                     }
                 }
             });
 
-            console.log('[DEBUG] sec3Swiper 초기화 완료:', sec3Swiper);
-
-            /* 폴백: 직접 click 이벤트도 추가 */
+            /* Section 3 이미지 직접 클릭 폴백 */
             document.querySelectorAll('.sec3-modal-trigger').forEach(function (img, i) {
-                img.addEventListener('click', function (e) {
-                    console.log('[DEBUG] 직접 click 감지! index:', i, 'target:', e.target);
+                img.addEventListener('click', function () {
+                    openModal(i);
+                });
+            });
+
+            /* Section 4 그리드 사진 클릭 → 모달 */
+            document.querySelectorAll('.group-7 img').forEach(function (img, i) {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function () {
                     openModal(i);
                 });
             });
