@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/vars.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
         <title>청원 소이산 두부촌</title>
     </head>
@@ -99,7 +100,12 @@
             </div>
             <div class="header">
                 <img class="logo2" src="images/logo1.png" />
-                <div class="gnb">
+                <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="gnb" id="gnb">
                     <div class="div3"><a href="section1">대표음식</a></div>
                     <div class="div3"><a href="section2">소이산두부촌</a></div>
                     <div class="div3"><a href="section3">새벽의 시작</a></div>
@@ -107,6 +113,7 @@
                     <div class="div3"><a href="section5" target="_blank">안내&네이버예약</a></div>
                     <div class="div3"><a href="section6">약도</a></div>
                 </div>
+                <div class="gnb-overlay" id="gnbOverlay"></div>
             </div>
             <div id="section1">
                 <div class="container">
@@ -439,95 +446,90 @@
 
             
             <div id="section3">
-
-              
-
                 <img src="images/sec2_img.png" alt="" class="sec3_ggu1">
-
-
-                <div class="container">
-                  <div class="frame-30">
-                      <div class="daily-morning-routine-of-soisan-dubuchon">
-                          Daily Morning Routine of
-                          <br />
-                          Soisan Dubuchon
-                      </div>
-                      <div class="div10">
-                          소이산두부촌의
-                          <br />
-                          매일 새벽일과
-                      </div>
-                      <div class="frame-29">
-                          <img class="frame-27" src="images/frame-270.svg" />
-                          <img class="frame-28" src="images/frame-280.svg" />
-                      </div>
-                  </div>
-                  <div class="frame-31">
-                      <div class="sec-item">
-                          <div class="sec-3-figure">
-                              <img
-                                  class="sec-3-img-1"
-                                  src="images/sec-3-img-10.png"
-                              />
-                          </div>
-                          <div class="sec-3-text">
-                              <div class="div11">새벽을 여는 첫 손길</div>
-                              <div class="div12">
-                                  이른 새벽, 정성껏 준비한 콩물이 큰 가마솥에
-                                  담깁니다. 하루의 시작은 깨끗한 재료와 정직한
-                                  과정에서 시작됩니다.
-                              </div>
-                          </div>
-                      </div>
-                      <div class="sec-item">
-                          <div class="sec-3-figure">
-                              <img
-                                  class="photo-4-1"
-                                  src="images/photo-4-10.png"
-                              />
-                          </div>
-                          <div class="sec-3-text">
-                              <div class="div11">전통 방식 그대로 젓기</div>
-                              <div class="div12">
-                                  온도와 농도를 맞추며 천천히 저어줍니다.
-                                  <br />
-                                  기계가 아닌 사람의 손으로 직접 만드는 전통
-                                  방식을 지킵니다.
-                              </div>
-                          </div>
-                      </div>
-                      <div class="sec-item">
-                          <div class="sec-3-figure2">
-                              <img
-                                  class="photo-5-1"
-                                  src="images/photo-5-10.png"
-                              />
-                          </div>
-                          <div class="sec-3-text">
-                              <div class="div11">두부가 만들어지는 순간</div>
-                              <div class="div12">
-                                  몽글몽글 순두부가 만들어지는 중요한 과정입니다.
-                                  오랜 경험으로 가장 좋은 상태를 완성합니다.
-                              </div>
-                          </div>
-                      </div>
-                      <div class="sec-item">
-                          <div class="sec-3-figure">
-                              <img
-                                  class="photo-3-1"
-                                  src="images/photo-3-10.png"
-                              />
-                          </div>
-                          <div class="sec-3-text">
-                              <div class="div11">정확한 계량과 마무리</div>
-                              <div class="div12">
-                                  마지막까지 세심하게 관리하여 부드럽고
-                                  <br />
-                                  고소한 두부의 맛을 완성합니다.
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                <div class="sec3-inner">
+                    <div class="frame-30">
+                        <div class="daily-morning-routine-of-soisan-dubuchon">
+                            Daily Morning Routine of
+                            <br />
+                            Soisan Dubuchon
+                        </div>
+                        <div class="div10">
+                            소이산두부촌의
+                            <br />
+                            매일 새벽일과
+                        </div>
+                        <div class="frame-29">
+                            <img class="frame-27 swiper-prev-btn" src="images/frame-270.svg" />
+                            <img class="frame-28 swiper-next-btn" src="images/frame-280.svg" />
+                        </div>
+                    </div>
+                    <div class="frame-31">
+                        <div class="swiper sec3-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="sec-item">
+                                        <div class="sec-3-figure">
+                                            <img class="sec-3-img-1" src="images/sec-3-img-10.png" />
+                                        </div>
+                                        <div class="sec-3-text">
+                                            <div class="div11">새벽을 여는 첫 손길</div>
+                                            <div class="div12">
+                                                이른 새벽, 정성껏 준비한 콩물이 큰 가마솥에
+                                                담깁니다. 하루의 시작은 깨끗한 재료와 정직한
+                                                과정에서 시작됩니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sec-item">
+                                        <div class="sec-3-figure">
+                                            <img class="photo-4-1" src="images/photo-4-10.png" />
+                                        </div>
+                                        <div class="sec-3-text">
+                                            <div class="div11">전통 방식 그대로 젓기</div>
+                                            <div class="div12">
+                                                온도와 농도를 맞추며 천천히 저어줍니다.
+                                                <br />
+                                                기계가 아닌 사람의 손으로 직접 만드는 전통
+                                                방식을 지킵니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sec-item">
+                                        <div class="sec-3-figure2">
+                                            <img class="photo-5-1" src="images/photo-5-10.png" />
+                                        </div>
+                                        <div class="sec-3-text">
+                                            <div class="div11">두부가 만들어지는 순간</div>
+                                            <div class="div12">
+                                                몽글몽글 순두부가 만들어지는 중요한 과정입니다.
+                                                오랜 경험으로 가장 좋은 상태를 완성합니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sec-item">
+                                        <div class="sec-3-figure">
+                                            <img class="photo-3-1" src="images/photo-3-10.png" />
+                                        </div>
+                                        <div class="sec-3-text">
+                                            <div class="div11">정확한 계량과 마무리</div>
+                                            <div class="div12">
+                                                마지막까지 세심하게 관리하여 부드럽고
+                                                <br />
+                                                고소한 두부의 맛을 완성합니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -832,7 +834,48 @@
                 </div>
             </div>
 
-            
+
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            /* Swiper initialization for section3 */
+            var sec3Swiper = new Swiper('.sec3-swiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                grabCursor: true,
+                navigation: {
+                    prevEl: '.swiper-prev-btn',
+                    nextEl: '.swiper-next-btn',
+                },
+            });
+
+            /* Hamburger menu */
+            const hamburger = document.getElementById('hamburger');
+            const gnb = document.getElementById('gnb');
+            const gnbOverlay = document.getElementById('gnbOverlay');
+
+            hamburger.addEventListener('click', function () {
+                hamburger.classList.toggle('active');
+                gnb.classList.toggle('open');
+                gnbOverlay.classList.toggle('open');
+                document.body.classList.toggle('menu-open');
+            });
+
+            gnbOverlay.addEventListener('click', function () {
+                hamburger.classList.remove('active');
+                gnb.classList.remove('open');
+                gnbOverlay.classList.remove('open');
+                document.body.classList.remove('menu-open');
+            });
+
+            gnb.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    hamburger.classList.remove('active');
+                    gnb.classList.remove('open');
+                    gnbOverlay.classList.remove('open');
+                    document.body.classList.remove('menu-open');
+                });
+            });
+        </script>
     </body>
 </html>
