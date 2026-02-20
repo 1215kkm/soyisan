@@ -1898,7 +1898,7 @@ a,
 .scroll-reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 2s ease, transform 2s ease;
 }
 .scroll-reveal.visible {
   opacity: 1;
@@ -1907,18 +1907,18 @@ a,
 .scroll-reveal-child > * {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 1.5s ease, transform 1.5s ease;
 }
 .scroll-reveal-child.visible > * {
   opacity: 1;
   transform: translateY(0);
 }
 .scroll-reveal-child.visible > *:nth-child(1) { transition-delay: 0s; }
-.scroll-reveal-child.visible > *:nth-child(2) { transition-delay: 0.15s; }
-.scroll-reveal-child.visible > *:nth-child(3) { transition-delay: 0.3s; }
-.scroll-reveal-child.visible > *:nth-child(4) { transition-delay: 0.45s; }
-.scroll-reveal-child.visible > *:nth-child(5) { transition-delay: 0.6s; }
-.scroll-reveal-child.visible > *:nth-child(6) { transition-delay: 0.75s; }
+.scroll-reveal-child.visible > *:nth-child(2) { transition-delay: 0.375s; }
+.scroll-reveal-child.visible > *:nth-child(3) { transition-delay: 0.75s; }
+.scroll-reveal-child.visible > *:nth-child(4) { transition-delay: 1.125s; }
+.scroll-reveal-child.visible > *:nth-child(5) { transition-delay: 1.5s; }
+.scroll-reveal-child.visible > *:nth-child(6) { transition-delay: 1.875s; }
 
 /* ========================================
    Hero Text Animation
@@ -1927,7 +1927,7 @@ a,
   display: inline-block;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 2s ease, transform 2s ease;
 }
 .hero-char.show {
   opacity: 1;
@@ -2491,14 +2491,15 @@ body.menu-open {
   .sec3-inner {
     flex-direction: column;
     gap: 40px;
-    padding-left: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .frame-30 {
     width: 100%;
     align-items: center;
     text-align: center;
-    padding-right: 20px;
+    padding: 0 20px;
   }
 
   .daily-morning-routine-of-soisan-dubuchon {
@@ -2520,8 +2521,17 @@ body.menu-open {
     height: 50px;
   }
 
+  .frame-31 {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .sec3-swiper {
+    overflow: hidden;
+  }
+
   .sec3-swiper .swiper-slide {
-    width: 260px;
+    width: calc(100vw - 100px);
   }
 
   .sec-item {
@@ -2728,10 +2738,6 @@ body.menu-open {
 
   .daily-morning-routine-of-soisan-dubuchon {
     font-size: 16px;
-  }
-
-  .sec3-swiper .swiper-slide {
-    width: calc(100vw - 100px);
   }
 
   .group-7 {
