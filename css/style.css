@@ -1898,6 +1898,9 @@ a,
 /* ========================================
    Mobile Call Button & Hamburger (hidden on desktop)
    ======================================== */
+
+  .mobile_menu {display: flex; gap: 10px;}
+
 .mobile-call-btn {
   display: none;
   align-items: center;
@@ -1908,6 +1911,7 @@ a,
   text-decoration: none;
   z-index: 1001;
 }
+.mobile-call-btn svg {width: 30px;}
 
 .hamburger {
   display: none;
