@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/vars.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
         <title>청원 소이산 두부촌</title>
     </head>
@@ -19,97 +20,64 @@
                 
                 <img class="logo" src="images/logo0.png" />
 
-                <div class="hero-text">
-                    <div class="div">
-                        완
-                        <br />
-                        성
-                        <br />
-                        됩
-                        <br />
-                        니
-                        <br />
-                        다
+                <div class="hero-text" id="heroText">
+                    <div class="div hero-col" data-col="0">
+                        <span class="hero-char" style="color:#ffe6c5">완</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">성</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">됩</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">니</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">다</span>
                     </div>
-                    <div class="div2">
-                        <span>
-                            <span class="div-2-span">
-                                새
-                                <br />
-                                벽
-                                <br />
-                                의
-                                <br />
-                                <br />
-                                정
-                                <br />
-                                성
-                                <br />
-                            </span>
-                            <span class="div-2-span2">
-                                으
-                                <br />
-                                로
-                            </span>
-                        </span>
+                    <div class="div2 hero-col" data-col="1">
+                        <span class="hero-char" style="color:#fff">새</span><br/>
+                        <span class="hero-char" style="color:#fff">벽</span><br/>
+                        <span class="hero-char" style="color:#fff">의</span><br/><br/>
+                        <span class="hero-char" style="color:#fff">정</span><br/>
+                        <span class="hero-char" style="color:#fff">성</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">으</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">로</span>
                     </div>
-                    <div class="div2">
-                        <span>
-                            <span class="div-2-span">
-                                백
-                                <br />
-                                퍼
-                                <br />
-                                센
-                                <br />
-                                트
-                                <br />
-                            </span>
-                            <span class="div-2-span2">
-                                의
-                                <br />
-                                <br />
-                                국
-                                <br />
-                                산
-                                <br />
-                                콩
-                                <br />
-                                과
-                            </span>
-                        </span>
+                    <div class="div2 hero-col" data-col="2">
+                        <span class="hero-char" style="color:#fff">백</span><br/>
+                        <span class="hero-char" style="color:#fff">퍼</span><br/>
+                        <span class="hero-char" style="color:#fff">센</span><br/>
+                        <span class="hero-char" style="color:#fff">트</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">의</span><br/><br/>
+                        <span class="hero-char" style="color:#ffe6c5">국</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">산</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">콩</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">과</span>
                     </div>
-                    <div class="div">
-                        소
-                        <br />
-                        이
-                        <br />
-                        산
-                        <br />
-                        의
-                        <br />
-                        <br />
-                        두
-                        <br />
-                        부
-                        <br />
-                        는
+                    <div class="div hero-col" data-col="3">
+                        <span class="hero-char" style="color:#ffe6c5">소</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">이</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">산</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">의</span><br/><br/>
+                        <span class="hero-char" style="color:#ffe6c5">두</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">부</span><br/>
+                        <span class="hero-char" style="color:#ffe6c5">는</span>
                     </div>
                 </div>
             </div>
             <div class="header">
                 <img class="logo2" src="images/logo1.png" />
-                <div class="gnb">
-                    <div class="div3"><a href="section1">대표음식</a></div>
-                    <div class="div3"><a href="section2">소이산두부촌</a></div>
-                    <div class="div3"><a href="section3">새벽의 시작</a></div>
-                    <div class="div3"><a href="section4">예약문의</a></div>
-                    <div class="div3"><a href="section5" target="_blank">안내&네이버예약</a></div>
-                    <div class="div3"><a href="section6">약도</a></div>
+                <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="gnb" id="gnb">
+                    <div class="div3"><a href="#section1">대표음식</a></div>
+                    <div class="div3"><a href="#section2">소이산두부촌</a></div>
+                    <div class="div3"><a href="#section3">새벽의 시작</a></div>
+                    <div class="div3"><a href="#section4">예약문의</a></div>
+                    <div class="div3"><a href="#section5">안내&네이버예약</a></div>
+                    <div class="div3"><a href="#section6">약도</a></div>
                 </div>
+                <div class="gnb-overlay" id="gnbOverlay"></div>
             </div>
             <div id="section1">
-                <div class="container">
+                <div class="container scroll-reveal">
                     <img class="image-30" src="images/image-300.png" />
                     <div class="frame-15">
                         <div class="frame-5">
@@ -121,7 +89,7 @@
                                 대접합니다
                             </div>
                         </div>
-                        <div class="item-box">
+                        <div class="item-box scroll-reveal-child">
                             <div class="frame-9">
                                 <div class="rectangle-4"></div>
                                 <div class="item-ex">
@@ -206,7 +174,7 @@
                                             class="icon-7"
                                             src="images/icon-70.png"
                                         />
-                                        <img class="_2" src="images/_20.png" />
+                                        <img class="_2" src="images/icon-bowl.png" />
                                     </div>
                                 </div>
                                 <div class="item-img">
@@ -334,7 +302,7 @@
 
             
             <div id="section2">
-                <div class="container">
+                <div class="container scroll-reveal">
                     <div class="frame-26">
                         <div class="frame-15">
                             <div class="frame-5">
@@ -360,7 +328,7 @@
                             수 있는 건강한 한 끼를 약속드립니다.
                         </div>
                     </div>
-                    <div class="frame-25">
+                    <div class="frame-25 scroll-reveal-child">
                         <div class="frame-20">
                             <img class="image-412" src="images/image-411.png" />
                             <div class="frame-19">
@@ -439,95 +407,90 @@
 
             
             <div id="section3">
-
-              
-
                 <img src="images/sec2_img.png" alt="" class="sec3_ggu1">
-
-
-                <div class="container">
-                  <div class="frame-30">
-                      <div class="daily-morning-routine-of-soisan-dubuchon">
-                          Daily Morning Routine of
-                          <br />
-                          Soisan Dubuchon
-                      </div>
-                      <div class="div10">
-                          소이산두부촌의
-                          <br />
-                          매일 새벽일과
-                      </div>
-                      <div class="frame-29">
-                          <img class="frame-27" src="images/frame-270.svg" />
-                          <img class="frame-28" src="images/frame-280.svg" />
-                      </div>
-                  </div>
-                  <div class="frame-31">
-                      <div class="sec-item">
-                          <div class="sec-3-figure">
-                              <img
-                                  class="sec-3-img-1"
-                                  src="images/sec-3-img-10.png"
-                              />
-                          </div>
-                          <div class="sec-3-text">
-                              <div class="div11">새벽을 여는 첫 손길</div>
-                              <div class="div12">
-                                  이른 새벽, 정성껏 준비한 콩물이 큰 가마솥에
-                                  담깁니다. 하루의 시작은 깨끗한 재료와 정직한
-                                  과정에서 시작됩니다.
-                              </div>
-                          </div>
-                      </div>
-                      <div class="sec-item">
-                          <div class="sec-3-figure">
-                              <img
-                                  class="photo-4-1"
-                                  src="images/photo-4-10.png"
-                              />
-                          </div>
-                          <div class="sec-3-text">
-                              <div class="div11">전통 방식 그대로 젓기</div>
-                              <div class="div12">
-                                  온도와 농도를 맞추며 천천히 저어줍니다.
-                                  <br />
-                                  기계가 아닌 사람의 손으로 직접 만드는 전통
-                                  방식을 지킵니다.
-                              </div>
-                          </div>
-                      </div>
-                      <div class="sec-item">
-                          <div class="sec-3-figure2">
-                              <img
-                                  class="photo-5-1"
-                                  src="images/photo-5-10.png"
-                              />
-                          </div>
-                          <div class="sec-3-text">
-                              <div class="div11">두부가 만들어지는 순간</div>
-                              <div class="div12">
-                                  몽글몽글 순두부가 만들어지는 중요한 과정입니다.
-                                  오랜 경험으로 가장 좋은 상태를 완성합니다.
-                              </div>
-                          </div>
-                      </div>
-                      <div class="sec-item">
-                          <div class="sec-3-figure">
-                              <img
-                                  class="photo-3-1"
-                                  src="images/photo-3-10.png"
-                              />
-                          </div>
-                          <div class="sec-3-text">
-                              <div class="div11">정확한 계량과 마무리</div>
-                              <div class="div12">
-                                  마지막까지 세심하게 관리하여 부드럽고
-                                  <br />
-                                  고소한 두부의 맛을 완성합니다.
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                <div class="sec3-inner scroll-reveal">
+                    <div class="frame-30">
+                        <div class="daily-morning-routine-of-soisan-dubuchon">
+                            Daily Morning Routine of
+                            <br />
+                            Soisan Dubuchon
+                        </div>
+                        <div class="div10">
+                            소이산두부촌의
+                            <br />
+                            매일 새벽일과
+                        </div>
+                        <div class="frame-29">
+                            <img class="frame-27 swiper-prev-btn" src="images/frame-270.svg" />
+                            <img class="frame-28 swiper-next-btn" src="images/frame-280.svg" />
+                        </div>
+                    </div>
+                    <div class="frame-31">
+                        <div class="swiper sec3-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="sec-item">
+                                        <div class="sec-3-figure">
+                                            <img class="sec-3-img-1 sec3-modal-trigger" data-slide-index="0" src="images/sec-3-img-10.png" style="cursor:pointer" />
+                                        </div>
+                                        <div class="sec-3-text">
+                                            <div class="div11">새벽을 여는 첫 손길</div>
+                                            <div class="div12">
+                                                이른 새벽, 정성껏 준비한 콩물이 큰 가마솥에
+                                                담깁니다. 하루의 시작은 깨끗한 재료와 정직한
+                                                과정에서 시작됩니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sec-item">
+                                        <div class="sec-3-figure">
+                                            <img class="photo-4-1 sec3-modal-trigger" data-slide-index="1" src="images/photo-4-10.png" style="cursor:pointer" />
+                                        </div>
+                                        <div class="sec-3-text">
+                                            <div class="div11">전통 방식 그대로 젓기</div>
+                                            <div class="div12">
+                                                온도와 농도를 맞추며 천천히 저어줍니다.
+                                                <br />
+                                                기계가 아닌 사람의 손으로 직접 만드는 전통
+                                                방식을 지킵니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sec-item">
+                                        <div class="sec-3-figure2">
+                                            <img class="photo-5-1 sec3-modal-trigger" data-slide-index="2" src="images/photo-5-10.png" style="cursor:pointer" />
+                                        </div>
+                                        <div class="sec-3-text">
+                                            <div class="div11">두부가 만들어지는 순간</div>
+                                            <div class="div12">
+                                                몽글몽글 순두부가 만들어지는 중요한 과정입니다.
+                                                오랜 경험으로 가장 좋은 상태를 완성합니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sec-item">
+                                        <div class="sec-3-figure">
+                                            <img class="photo-3-1 sec3-modal-trigger" data-slide-index="3" src="images/photo-3-10.png" style="cursor:pointer" />
+                                        </div>
+                                        <div class="sec-3-text">
+                                            <div class="div11">정확한 계량과 마무리</div>
+                                            <div class="div12">
+                                                마지막까지 세심하게 관리하여 부드럽고
+                                                <br />
+                                                고소한 두부의 맛을 완성합니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -535,7 +498,7 @@
 
 
             <div id="section4">
-                <div class="frame-162">
+                <div class="frame-162 scroll-reveal">
                     <img class="image-43" src="images/image-430.png" />
                     <div class="frame-5">
                         <div class="div7">
@@ -651,7 +614,7 @@
             </div>
             
             <div id="section5">
-                <div class="container">
+                <div class="container scroll-reveal">
                   <div class="frame-46">
                       <div class="frame-38">
                           <div class="rectangle-10">
@@ -762,7 +725,7 @@
 
             
             <div id="section6">
-                <div class="frame-48">
+                <div class="frame-48 scroll-reveal">
                     <div class="frame-47">
                         <div class="div19">약도</div>
                         <div class="div20">소이산 두부촌으로 오세요</div>
@@ -832,7 +795,196 @@
                 </div>
             </div>
 
-            
+
         </div>
+
+        <!-- Image Modal -->
+        <div class="img-modal" id="imgModal">
+            <div class="img-modal-close" id="imgModalClose">&times;</div>
+            <div class="swiper img-modal-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/sec3-large-1.jpg" onerror="this.onerror=null;this.src='images/sec-3-img-10.png'" alt="새벽을 여는 첫 손길" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-2.jpg" onerror="this.onerror=null;this.src='images/photo-4-10.png'" alt="전통 방식 그대로 젓기" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-3.jpg" onerror="this.onerror=null;this.src='images/photo-5-10.png'" alt="두부가 만들어지는 순간" /></div>
+                    <div class="swiper-slide"><img src="images/sec3-large-4.jpg" onerror="this.onerror=null;this.src='images/photo-3-10.png'" alt="정확한 계량과 마무리" /></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            /* ========================================
+               Section 3 Swiper
+               ======================================== */
+            var sec3Swiper = new Swiper('.sec3-swiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                grabCursor: true,
+                navigation: {
+                    prevEl: '.swiper-prev-btn',
+                    nextEl: '.swiper-next-btn',
+                },
+            });
+
+            /* ========================================
+               Image Modal Swiper
+               ======================================== */
+            var modalSwiper = new Swiper('.img-modal-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                navigation: {
+                    prevEl: '.img-modal .swiper-button-prev',
+                    nextEl: '.img-modal .swiper-button-next',
+                },
+                keyboard: { enabled: true },
+            });
+
+            var imgModal = document.getElementById('imgModal');
+            var imgModalClose = document.getElementById('imgModalClose');
+
+            document.querySelectorAll('.sec3-modal-trigger').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    var idx = parseInt(this.getAttribute('data-slide-index'));
+                    modalSwiper.slideTo(idx, 0);
+                    imgModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            imgModalClose.addEventListener('click', function () {
+                imgModal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            imgModal.addEventListener('click', function (e) {
+                if (e.target === imgModal) {
+                    imgModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && imgModal.classList.contains('active')) {
+                    imgModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            /* ========================================
+               Hamburger Menu
+               ======================================== */
+            var hamburger = document.getElementById('hamburger');
+            var gnb = document.getElementById('gnb');
+            var gnbOverlay = document.getElementById('gnbOverlay');
+
+            hamburger.addEventListener('click', function () {
+                hamburger.classList.toggle('active');
+                gnb.classList.toggle('open');
+                gnbOverlay.classList.toggle('open');
+                document.body.classList.toggle('menu-open');
+            });
+
+            gnbOverlay.addEventListener('click', function () {
+                hamburger.classList.remove('active');
+                gnb.classList.remove('open');
+                gnbOverlay.classList.remove('open');
+                document.body.classList.remove('menu-open');
+            });
+
+            gnb.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    hamburger.classList.remove('active');
+                    gnb.classList.remove('open');
+                    gnbOverlay.classList.remove('open');
+                    document.body.classList.remove('menu-open');
+                });
+            });
+
+            /* ========================================
+               Hero Text Character Animation
+               순서: 우→좌 (소이산의두부는 → 백퍼센트의국산콩과 → 새벽의정성으로 → 완성됩니다)
+               각 글자가 밑에서(50px) 위로 하나씩 나타남
+               ======================================== */
+            (function () {
+                var cols = document.querySelectorAll('.hero-col');
+                if (!cols.length) return;
+                // DOM order: col0=완성됩니다, col1=새벽의정성으로, col2=백퍼센트의국산콩과, col3=소이산의두부는
+                // Animation order: rightmost first → 3, 2, 1, 0
+                var order = [3, 2, 1, 0];
+                var allChars = [];
+                order.forEach(function (idx) {
+                    var chars = cols[idx].querySelectorAll('.hero-char');
+                    chars.forEach(function (c) { allChars.push(c); });
+                });
+
+                var delay = 300;
+                allChars.forEach(function (span, i) {
+                    setTimeout(function () {
+                        span.classList.add('show');
+                    }, delay + i * 80);
+                });
+            })();
+
+            /* ========================================
+               Scroll Reveal (IntersectionObserver)
+               ======================================== */
+            (function () {
+                var revealEls = document.querySelectorAll('.scroll-reveal, .scroll-reveal-child');
+                if (!revealEls.length) return;
+
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                revealEls.forEach(function (el) {
+                    observer.observe(el);
+                });
+            })();
+
+            /* ========================================
+               Section 4 Phone Number Bounce Animation
+               ======================================== */
+            (function () {
+                var phoneEl = document.querySelector('._033-455-5698');
+                if (!phoneEl) return;
+                var text = phoneEl.textContent.trim();
+                phoneEl.innerHTML = '';
+                var chars = [];
+                for (var i = 0; i < text.length; i++) {
+                    var ch = text[i];
+                    var span = document.createElement('span');
+                    span.className = 'phone-char';
+                    if (ch === ' ') {
+                        span.innerHTML = '&nbsp;';
+                    } else {
+                        span.textContent = ch;
+                    }
+                    phoneEl.appendChild(span);
+                    chars.push(span);
+                }
+
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            chars.forEach(function (span, i) {
+                                setTimeout(function () {
+                                    span.classList.add('bounce');
+                                }, i * 80);
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                observer.observe(phoneEl);
+            })();
+        </script>
     </body>
 </html>

@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 a,
    button,
    input,
@@ -257,7 +260,7 @@ a,
 .item-box {
   display: flex;
   flex-direction: row;
-  gap:  140px 47px;
+  gap:  170px 47px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -280,7 +283,7 @@ a,
   background: #ffffff;
   align-self: stretch;
   flex-shrink: 0;
-  height: 537px;
+  height: 580px;
   position: relative;
   box-shadow: 22px 22px 50px rgba(0,0,0,0.1);
 }
@@ -886,6 +889,7 @@ a,
   background: #ffffff;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 50px;
+  padding: 40px 30px 60px;
   box-shadow: 22px 22px 50px rgba(0, 0, 0, 0.1);
 }
 .rectangle-43 {
@@ -991,16 +995,16 @@ a,
 #section3 {
   background: #018a5e;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 83px;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding: 180px 0;
   position: relative;
+  overflow: hidden;
 }
-#section3 .container {
+.sec3-inner {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  padding-left: max(40px, calc((100vw - 1440px) / 2 + 40px));
 }
 .sec3_ggu1 {position: absolute; top: -180px; mix-blend-mode: darken;}
 
@@ -1011,8 +1015,7 @@ a,
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 404px;
-  height: 382px;
+  width: 434px;
   position: relative;
 }
 .daily-morning-routine-of-soisan-dubuchon {
@@ -1054,6 +1057,7 @@ a,
   height: 70px;
   position: relative;
   overflow: visible;
+  cursor: pointer;
 }
 .frame-28 {
   border-radius: 10px;
@@ -1067,15 +1071,33 @@ a,
   height: 70px;
   position: relative;
   overflow: visible;
+  cursor: pointer;
 }
 .frame-31 {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
+  flex: 1;
+  min-width: 0;
+  overflow: visible;
   position: relative;
+}
+.sec3-swiper {
+  overflow: visible;
+}
+.sec3-swiper .swiper-wrapper {
+  display: flex;
+}
+.sec3-swiper .swiper-slide {
+  width: 260px;
+  flex-shrink: 0;
+}
+.sec3-swiper .sec-3-text {
+  gap: 14px;
+  padding: 0 16px 16px;
+}
+.sec3-swiper .div11 {
+  font-size: 17px;
+}
+.sec3-swiper .div12 {
+  font-size: 14px;
 }
 .sec-item {
   background: #ffffff;
@@ -1085,38 +1107,35 @@ a,
   gap: 16px;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-shrink: 0;
-  width: 345px;
-  height: 433px;
+  width: 100%;
+  height: 380px;
   position: relative;
   overflow: hidden;
   box-shadow: 22px 22px 50px rgba(0, 0, 0, 0.1);
 }
 .sec-3-figure {
   flex-shrink: 0;
-  width: 345px;
-  height: 258px;
-  position: static;
+  width: 100%;
+  height: 200px;
+  position: relative;
 }
 .sec-3-img-1 {
-  width: 345px;
-  height: 258px;
+  width: 100%;
+  height: 200px;
   position: absolute;
   left: 0px;
   top: 0px;
   object-fit: cover;
-  aspect-ratio: 345/258;
 }
 .sec-3-text {
-  padding: 0px 20px 0px 20px;
+  padding: 0px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 345px;
-  height: 148px;
+  width: 100%;
   position: relative;
 }
 .div11 {
@@ -1138,37 +1157,34 @@ a,
   flex: 1;
 }
 .photo-4-1 {
-  width: 345px;
-  height: 258px;
+  width: 100%;
+  height: 200px;
   position: absolute;
   left: 0px;
   top: 0px;
   object-fit: cover;
-  aspect-ratio: 345/258;
 }
 .sec-3-figure2 {
   flex-shrink: 0;
-  width: 345px;
-  height: 259px;
-  position: static;
+  width: 100%;
+  height: 200px;
+  position: relative;
 }
 .photo-5-1 {
-  width: 345px;
-  height: 259px;
+  width: 100%;
+  height: 200px;
   position: absolute;
   left: 0px;
   top: 0px;
   object-fit: cover;
-  aspect-ratio: 345/259;
 }
 .photo-3-1 {
-  width: 345px;
-  height: 258px;
+  width: 100%;
+  height: 200px;
   position: absolute;
   left: 0px;
   top: 0px;
   object-fit: cover;
-  aspect-ratio: 345/258;
 }
 #section2 {
   background: #ffffff;
@@ -1811,4 +1827,946 @@ a,
 }
 ._127-46-05045-033-455-6686-36-24021-2016-all-rights-reserved-designed-by-sowonweb-span2 {
   text-decoration: underline;
+}
+
+/* ========================================
+   Swiper arrow fix
+   ======================================== */
+.swiper-prev-btn,
+.swiper-next-btn {
+  opacity: 1 !important;
+  display: flex !important;
+}
+.swiper-prev-btn.swiper-button-disabled,
+.swiper-next-btn.swiper-button-disabled {
+  opacity: 0.35 !important;
+}
+
+/* ========================================
+   Image Modal
+   ======================================== */
+.img-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+.img-modal.active {
+  display: flex;
+}
+.img-modal .swiper {
+  width: 80%;
+  max-width: 900px;
+  height: 80vh;
+}
+.img-modal .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-modal .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.img-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 10000;
+  line-height: 1;
+  font-family: sans-serif;
+}
+.img-modal .swiper-button-next,
+.img-modal .swiper-button-prev {
+  color: #fff;
+}
+
+/* ========================================
+   Scroll Reveal Animation
+   ======================================== */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-reveal-child > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.scroll-reveal-child.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-reveal-child.visible > *:nth-child(1) { transition-delay: 0s; }
+.scroll-reveal-child.visible > *:nth-child(2) { transition-delay: 0.375s; }
+.scroll-reveal-child.visible > *:nth-child(3) { transition-delay: 0.75s; }
+.scroll-reveal-child.visible > *:nth-child(4) { transition-delay: 1.125s; }
+.scroll-reveal-child.visible > *:nth-child(5) { transition-delay: 1.5s; }
+.scroll-reveal-child.visible > *:nth-child(6) { transition-delay: 1.875s; }
+
+/* ========================================
+   Hero Text Animation
+   ======================================== */
+.hero-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+.hero-char.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   Phone Bounce Animation
+   ======================================== */
+.phone-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0);
+}
+.phone-char.bounce {
+  animation: charBounce 0.6s ease forwards;
+}
+@keyframes charBounce {
+  0% { opacity: 0; transform: translateY(20px); }
+  40% { opacity: 1; transform: translateY(-12px); }
+  60% { transform: translateY(4px); }
+  80% { transform: translateY(-4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================
+   Hamburger Button (hidden on desktop)
+   ======================================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Overlay (hidden on desktop) */
+.gnb-overlay {
+  display: none;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ========================================
+   Responsive: max-width 1439px (Tablet)
+   ======================================== */
+@media (max-width: 1439px) {
+  .container {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .header {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .gnb {
+    gap: 30px;
+  }
+
+  .div3 {
+    font-size: 17px;
+  }
+
+  .logo {
+    width: 400px;
+    height: auto;
+  }
+
+  .hero-text {
+    transform: translate(100%, -40%);
+  }
+
+  .div {
+    font-size: 42px;
+  }
+  .div2 {
+    font-size: 48px;
+  }
+
+  /* Section 1 - Food items */
+  .frame-5 {
+    width: 100%;
+  }
+
+  .item-box {
+    justify-content: center;
+    gap: 100px 30px;
+  }
+
+  .frame-9, .frame-10, .frame-11, .frame-12, .frame-13, .frame-14 {
+    width: calc(50% - 15px);
+    min-width: 320px;
+  }
+
+  .rectangle-4 {
+    height: 480px;
+  }
+
+  .item-ex {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .item-2, .item-4, .item-1, .item-6, .item-3, .item-52 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Section 2 - 5 promises */
+  .frame-25 {
+    gap: 80px;
+    row-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .frame-19 {
+    width: 240px;
+  }
+
+  /* Section 3 - Daily routine */
+  #section3 {
+    padding: 100px 0;
+  }
+
+  .sec3-inner {
+    padding-left: 30px;
+  }
+
+  .frame-30 {
+    width: 340px;
+  }
+
+  .sec3-swiper .swiper-slide {
+    width: 240px;
+  }
+
+  .sec-item {
+    height: 360px;
+  }
+
+  .sec-3-figure, .sec-3-figure2 {
+    height: 180px;
+  }
+
+  .sec-3-img-1, .photo-4-1, .photo-5-1, .photo-3-1 {
+    height: 180px;
+  }
+
+  /* Section 4 */
+  .frame-162 {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+
+  .frame-34 {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .frame-92 {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .item-ex2 {
+    width: calc(100% - 80px);
+    left: 40px;
+  }
+
+  .group-7 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+
+  .group-7 img {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .group-9 {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px 30px;
+  }
+
+  .rectangle-43 {
+    margin-top: 0;
+  }
+
+  .item-box2 {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ._033-455-5698 {
+    font-size: 36px;
+  }
+
+  .group-8 {
+    width: 100%;
+  }
+
+  /* Section 5 */
+  .frame-46 {
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .frame-38 {
+    width: 100%;
+  }
+
+  .frame-38 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .frame-45 {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .div14 {
+    font-size: 36px;
+  }
+
+  .image-45 {
+    display: none;
+  }
+
+  /* Section 6 */
+  .frame-47 {
+    width: 100%;
+  }
+
+  .div19 {
+    font-size: 36px;
+  }
+
+  /* Footer */
+  .footer-imgbox {
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  ._127-46-05045-033-455-6686-36-24021-2016-all-rights-reserved-designed-by-sowonweb {
+    font-size: 16px;
+  }
+
+  /* Decorative images */
+  .image-46 {
+    display: none;
+  }
+
+  .sec4_ggu1 {
+    display: none;
+  }
+
+  .sec3_ggu1 {
+    display: none;
+  }
+}
+
+/* ========================================
+   Responsive: max-width 1023px
+   ======================================== */
+@media (max-width: 1023px) {
+  .gnb {
+    gap: 20px;
+  }
+
+  .div3 {
+    font-size: 15px;
+  }
+
+  .logo2 {
+    width: 150px;
+    height: auto;
+  }
+
+  .frame-25 {
+    gap: 40px;
+    row-gap: 40px;
+  }
+
+  .frame-19 {
+    width: 200px;
+  }
+
+  .image-412, .image-31, .image-433 {
+    width: 140px;
+    height: 140px;
+  }
+
+  .untitled-15-1, .untitled-15-7 {
+    width: 140px;
+    height: 140px;
+  }
+
+  .group-5, .group-6 {
+    width: 140px;
+    height: 140px;
+  }
+
+  .group-4 {
+    width: 140px;
+    height: 140px;
+  }
+
+  .frame-20, .frame-21, .frame-22, .frame-23, .frame-24 {
+    gap: 24px;
+  }
+}
+
+/* ========================================
+   Responsive: max-width 768px (Mobile)
+   ======================================== */
+@media (max-width: 768px) {
+  /* Hamburger visible */
+  .hamburger {
+    display: flex;
+  }
+
+  /* GNB mobile drawer */
+  .gnb {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.92);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    z-index: 1000;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 80px 0;
+  }
+
+  .gnb.open {
+    right: 0;
+  }
+
+  .gnb .div3 {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .gnb .div3:last-child {
+    border-bottom: none;
+  }
+
+  .gnb .div3 a {
+    display: block;
+    padding: 0 40px;
+  }
+
+  /* Overlay */
+  .gnb-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .gnb-overlay.open {
+    display: block;
+    opacity: 1;
+  }
+
+  /* Header - reset transform so position:fixed works on gnb */
+  .header {
+    transform: none;
+    left: 0;
+    padding: 0 20px;
+  }
+
+  .logo2 {
+    width: 130px;
+    height: auto;
+  }
+
+  /* Container */
+  .container {
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  /* Hero */
+  .logo {
+    width: 260px;
+    height: auto;
+  }
+
+  .hero-text {
+    transform: translate(60%, -40%);
+    gap: 8px;
+  }
+
+  .div {
+    font-size: 28px;
+  }
+
+  .div2 {
+    font-size: 32px;
+  }
+
+  /* Section 1 */
+  #section1 {
+    padding: 60px 0 100px;
+  }
+
+  .div4 {
+    font-size: 22px;
+  }
+
+  ._100 {
+    font-size: 14px;
+  }
+
+  .item-box {
+    gap: 80px 20px;
+    justify-content: center;
+  }
+
+  .frame-9, .frame-10, .frame-11, .frame-12, .frame-13, .frame-14 {
+    width: 100%;
+    max-width: 400px;
+    min-width: auto;
+  }
+
+  .rectangle-4 {
+    height: 480px;
+  }
+
+  .item-ex {
+    width: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .item-2, .item-4, .item-1, .item-6, .item-3, .item-52 {
+    width: 220px;
+    height: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Section 2 */
+  #section2 {
+    padding: 80px 0;
+  }
+
+  ._5 {
+    font-size: 22px;
+  }
+
+  .div13 {
+    font-size: 13px;
+  }
+
+  .frame-25 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    row-gap: 40px;
+  }
+
+  .frame-20, .frame-21, .frame-22, .frame-23, .frame-24 {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    gap: 20px;
+  }
+
+  .image-412, .image-31, .image-433 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .untitled-15-1, .untitled-15-7 {
+    width: 120px;
+    height: 120px;
+    position: relative;
+  }
+
+  .group-5, .group-6 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .group-4 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .frame-19 {
+    width: auto;
+    height: auto;
+    flex: 1;
+  }
+
+  .div11 {
+    font-size: 17px;
+  }
+
+  .div12 {
+    font-size: 15px;
+  }
+
+  /* Section 3 */
+  #section3 {
+    padding: 60px 0;
+  }
+
+  .sec3-inner {
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .frame-30 {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .daily-morning-routine-of-soisan-dubuchon {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .div10 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .frame-29 {
+    justify-content: center;
+  }
+
+  .frame-27, .frame-28 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .frame-31 {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .sec3-swiper {
+    overflow: hidden;
+  }
+
+  .sec3-swiper .swiper-slide {
+    width: calc(100vw - 100px);
+  }
+
+  .sec-item {
+    height: auto;
+  }
+
+  .sec-3-figure, .sec-3-figure2 {
+    height: 190px;
+  }
+
+  .sec-3-img-1, .photo-4-1, .photo-5-1, .photo-3-1 {
+    height: 190px;
+  }
+
+  .sec-3-text {
+    gap: 16px;
+    padding: 0 16px 20px;
+  }
+
+  /* Section 4 */
+  #section4 {
+    padding: 80px 0;
+  }
+
+  .frame-162 {
+    padding: 0 20px;
+  }
+
+  .div7 {
+    font-size: 22px;
+  }
+
+  .frame-92 {
+    max-width: 100%;
+  }
+
+  .rectangle-42 {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .item-ex2 {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .div5 {
+    font-size: 18px;
+  }
+
+  .div8 {
+    font-size: 15px;
+  }
+
+  .group-7 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .group-9 {
+    padding: 30px 20px;
+  }
+
+  .rectangle-43 img {
+    width: 80px;
+  }
+
+  ._033-455-5698 {
+    font-size: 28px;
+  }
+
+  .div9 {
+    font-size: 17px;
+    width: auto;
+  }
+
+  .sec-4-iconbox span {
+    width: 28%;
+  }
+
+  /* Section 5 */
+  #section5 {
+    padding: 0 0 120px;
+  }
+
+  .frame-46 {
+    padding: 30px 20px;
+    flex-direction: column;
+  }
+
+  .frame-45 {
+    padding: 30px 20px;
+  }
+
+  .div14 {
+    font-size: 28px;
+  }
+
+  .div15 {
+    font-size: 16px;
+  }
+
+  .div16, .div17 {
+    font-size: 16px;
+  }
+
+  ._033-000-0000-10-00-19-00-15-00-17-00-8,
+  ._000 {
+    font-size: 15px;
+  }
+
+  .frame-37 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .frame-35, .frame-36 {
+    width: 100%;
+  }
+
+  .group-11 {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .group-11 img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0 !important;
+    border-radius: 20px;
+  }
+
+  /* Section 6 */
+  .frame-48 {
+    padding: 30px 0;
+  }
+
+  .div19 {
+    font-size: 28px;
+  }
+
+  .div20 {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  #footer {
+    padding: 40px 0;
+  }
+
+  #footer .logo2 {
+    width: 140px;
+    height: auto;
+  }
+
+  .footer-imgbox {
+    gap: 20px;
+  }
+
+  .item-22, .item-42, .item-12, .item-62, .item-32, .item-53 {
+    width: 60px;
+    height: 60px;
+  }
+
+  ._127-46-05045-033-455-6686-36-24021-2016-all-rights-reserved-designed-by-sowonweb {
+    font-size: 13px;
+    line-height: 180%;
+  }
+
+  .frame-52 {
+    padding: 0 20px;
+  }
+}
+
+/* ========================================
+   Responsive: max-width 480px (Small mobile)
+   ======================================== */
+@media (max-width: 480px) {
+  .logo {
+    width: 200px;
+  }
+
+  .hero-text {
+    transform: translate(40%, -40%);
+    gap: 6px;
+  }
+
+  .div {
+    font-size: 22px;
+  }
+
+  .div2 {
+    font-size: 26px;
+  }
+
+  .div10 {
+    font-size: 28px;
+  }
+
+  .daily-morning-routine-of-soisan-dubuchon {
+    font-size: 16px;
+  }
+
+  .group-7 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  ._033-455-5698 {
+    font-size: 24px;
+  }
+
+  .frame-25 {
+    gap: 30px;
+  }
+
+  .frame-20, .frame-21, .frame-22, .frame-23, .frame-24 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .frame-19 {
+    text-align: center;
+    align-items: center;
+  }
+
+  .div11 {
+    text-align: center;
+  }
+
+  .div12 {
+    text-align: center;
+  }
 }
